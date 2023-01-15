@@ -1,0 +1,64 @@
+Program : Sum upto N natural numbers
+#include <iostream>
+using namespace std;
+int main() {
+  std::cout << "Hello World!\n";
+  int n;
+  cin >> n;
+  int sum = 0;
+  for (int i = 0; i <= n; i++) {
+    sum = sum + i;
+  }
+  cout << sum << endl;
+}
+
+output : 
+Hello World!
+10
+55
+
+Program : Fibanocci series
+#include <iostream>
+using namespace std;
+int main() {
+  std::cout << "Hello World!\n";
+  int n;
+  cin >> n;
+  int a = 0, b = 1, res;
+  for (int i = 1; i <= n; i++) {
+    res = a + b;
+    cout << res;
+    b = a;
+    a = res;
+  }
+}
+
+output :
+Hello World!
+10
+11235813213455
+
+Program : Number is Prime
+#include <iostream>
+using namespace std;
+int main() {
+  std::cout << "Hello World!\n";
+  int n;
+  cin >> n;
+  bool isPrime;
+  for (int i = 2; i < n; i++) {
+    if (n % i == 0) {
+      isPrime = false;
+      break;
+    } else {
+      isPrime = true;
+    }
+  }
+  string res = isPrime ? "isPrime" : "isNotPrime";
+  cout << res << endl;
+}
+
+output : 
+Hello World!
+997
+isPrime
