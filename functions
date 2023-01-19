@@ -82,4 +82,62 @@ Hello World!
 5
 22
 
-Program : 
+Program : Add set bits of two integers
+#include <iostream>
+using namespace std;
+
+int setBits(int n){
+  int count = 0;
+  while(n != 0){
+    if(n & 1){
+      count = count + 1;
+    }
+    n = n >> 1;
+  }
+  return count;
+}
+
+int main() {
+  std::cout << "Hello World!\n";
+  int a,b;
+  cin >> a >> b;
+  cout << setBits(a) + setBits(b);
+  cout << endl;
+}
+
+output :
+Hello World!
+2 3
+3
+
+Program : nth term of fibonacci
+#include <iostream>
+using namespace std;
+
+int fibonacci(int n){
+  int a=0,b=1,c=0,i=0;
+  cout << "0 ";
+  while(i <= n-2){
+    c = a + b;
+    cout << c <<" ";
+    a = b;
+    b = c;
+    i = i + 1;
+  }
+  cout << endl;
+  return c;
+}
+
+int main() {
+  std::cout << "Hello World!\n";
+  int n;
+  cin >> n;
+  cout << fibonacci(n);
+  cout << endl;
+}
+
+output : 
+Hello World!
+8
+0 1 2 3 5 8 13 21 
+21
