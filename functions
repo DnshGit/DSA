@@ -1,0 +1,85 @@
+Program : Divide number int 100s,50s,20s,10s,1s
+#include <iostream>
+using namespace std;
+
+int main() {
+  std::cout << "Hello World!\n";
+  int n;
+  cin >> n;
+  int n100s,n50s,n20s,n10s,n1s;
+  n100s = n/100;
+  cout << "n100s: " << n100s << "; ";
+  n = n%100;
+  n50s = n/50;
+  cout << "n50s: " << n50s << "; ";
+  n= n%50;
+  n20s = n/20;
+  cout << "n20s: " << n20s << "; ";
+  n = n%20;
+  n10s = n/10;
+  cout << "n10s: " << n10s << "; ";
+  n1s = n%10;
+  cout << "n1s: " << n1s << "; ";
+  cout << endl;
+}
+
+output :
+Hello World!
+1330
+n100s: 13; n50s: 0; n20s: 1; n10s: 1; n1s: 0; 
+
+Program : factorial ncr
+#include <iostream>
+using namespace std;
+
+int factorial(int n){
+  int res=1;
+  while(n>1){
+    res = res * n;
+    n = n-1;
+  }
+  return res;
+}
+
+int ncr(int n, int r) {
+  int num = factorial(n);
+  int denom = factorial(n-r)*factorial(r);
+  return num/denom;
+}
+
+int main() {
+  std::cout << "Hello World!\n";
+  int n,r;
+  cin >> n >> r;
+  cout << ncr(n,r);
+  cout << endl;
+}
+
+output : 
+Hello World!
+5 2
+10
+
+Program : AP of 3n + 7; nth term
+#include <iostream>
+using namespace std;
+
+int ap(int n){
+  int res = 3*n + 7;
+  return res;
+}
+
+int main() {
+  std::cout << "Hello World!\n";
+  int n;
+  cin >> n;
+  cout << ap(n);
+  cout << endl;
+}
+
+output : 
+Hello World!
+5
+22
+
+Program : 
