@@ -1,0 +1,184 @@
+Program : Initialise Array with same value
+#include <iostream>
+using namespace std;
+
+int initialise(int arr[], int size, int val){
+  for(int i=0; i<size; i++){
+    arr[i] = val;
+  }
+  return 0;
+}
+
+void print(int arr[], int size){
+  for(int i=0; i<size; i++){
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
+
+int main() {
+  std::cout << "Hello World!\n";
+  int sampleArr[10];
+  initialise(sampleArr, 10, 1);
+  print(sampleArr, 10);
+}
+
+output :
+Hello World!
+1 1 1 1 1 1 1 1 1 1
+
+Program : Max and Min values in Array
+#include <iostream>
+using namespace std;
+
+int maxInArr(int arr[], int size){
+  int max = INT16_MIN;
+  for(int i=0; i<size; i++){
+    if(arr[i] > max){
+      max = arr[i];
+    }
+  }
+  return max;
+}
+
+int minInArr(int arr[], int size){
+  int min = INT16_MAX;
+  for(int i=0; i<size; i++){
+    if(arr[i] < min){
+      min = arr[i];
+    }
+  }
+  return min;
+}
+
+void print(int arr[], int size){
+  for(int i=0; i<size; i++){
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
+
+int main() {
+  std::cout << "Hello World!\n";
+  int sampleArr[10] = {-1,2,-3,4,-5,6,-7,8,-9,0};
+  cout << "In Array ";
+  print(sampleArr, 10);
+  cout << "Max is " << maxInArr(sampleArr, 10) << endl;
+  cout << "Min is " << minInArr(sampleArr, 10) << endl;
+}
+
+output : 
+Hello World!
+In Array -1 2 -3 4 -5 6 -7 8 -9 0 
+Max is 8
+Min is -9
+
+Program : Sum of all in Array
+#include <iostream>
+using namespace std;
+
+int sumArr(int arr[], int size){
+  int sum = 0;
+  for(int i=0; i<size; i++){
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+
+void print(int arr[], int size){
+  for(int i=0; i<size; i++){
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
+
+int main() {
+  std::cout << "Hello World!\n";
+  int sampleArr[10] = {-1,2,-3,4,-5,6,-7,8,-9,0};
+  cout << "In Array ";
+  print(sampleArr, 10);
+  cout << "Sum of all is " << sumArr(sampleArr, 10) << endl;
+}
+
+output : 
+Hello World!
+In Array -1 2 -3 4 -5 6 -7 8 -9 0 
+Sum of all is -5
+
+Program : Linear search in Array
+#include <iostream>
+using namespace std;
+
+int search(int arr[], int size, int val){
+  for(int i=0; i<size; i++){
+    if(arr[i] == val){
+      return 1;
+    }
+  }
+  return 0;
+}
+
+void print(int arr[], int size){
+  for(int i=0; i<size; i++){
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
+
+int main() {
+  std::cout << "Hello World!\n";
+  int sampleArr[10] = {-1,2,-3,4,-5,6,-7,8,-9,0};
+  cout << "search in Array ";
+  print(sampleArr, 10);
+  int n;
+  cin >> n;
+  bool found = search(sampleArr, 10, n);
+  if(found){
+    cout << "found";
+  } else {
+    cout << "not found";
+  }
+  cout << endl;
+}
+
+output : 
+Hello World!
+search in Array -1 2 -3 4 -5 6 -7 8 -9 0 
+5
+
+Program : Reverse Array
+#include <iostream>
+using namespace std;
+
+void print(int arr[], int size){
+  for(int i=0; i<size; i++){
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
+
+int reverse(int arr[], int size){
+  int start = 0;
+  int end = size-1;
+  while(start <= end){
+    swap(arr[start], arr[end]);
+    start++;
+    end--;
+  }
+  print(arr, size);
+  return 0;
+}
+
+int main() {
+  std::cout << "Hello World!\n";
+  int sampleArr[10] = {-1,2,-3,4,-5,6,-7,8,-9,0};
+  cout << "For Array ";
+  print(sampleArr, 10);
+  cout << "Reverse is ";
+  reverse(sampleArr, 10);
+}
+
+output :
+Hello World!
+For Array -1 2 -3 4 -5 6 -7 8 -9 0 
+Reverse is 0 -9 8 -7 6 -5 4 -3 2 -1 
